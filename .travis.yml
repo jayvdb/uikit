@@ -6,7 +6,7 @@ script:
     docker run --volume=$(pwd):/app --workdir=/app coala/base:pre /bin/bash -c
     "
     coala-quickstart --ci;
-    coala --ci --apply-patches --no-orig >coala-ci.log 2>/dev/null
+    coala --ci --apply-patches --no-orig >coala-ci.log
     "
   - git add --all
   # Create two diff files, and upload to https://clbin.com
